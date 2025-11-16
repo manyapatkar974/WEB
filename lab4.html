@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Registration Page</title>
+<style>
+ body {
+background-color:plum;
+font-family: Arial, sans-serif;
+}
+h2 {
+text-align: center;
+color:blue;
+font-size: 30px;
+margin-bottom: 20px;
+}
+table {
+            background-color: white;
+            padding: 20px;
+            margin: auto;
+            border: 2px solid aqua;
+            font-size: 16px;
+        }
+        td {
+            padding: 10px;
+            color:black;
+        }
+        input, select, textarea {
+            padding: 8px;
+            width: 250px;
+            border: 1px solid grey;
+            font-size: 14px;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+        }
+        button {
+            background-color:lightblue;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: darkblue;
+        }
+    </style>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form>
+        <table>
+            <tr>
+                <td>First Name:</td>
+                <td><input type="text" placeholder="Enter first name"></td>
+            </tr>
+            <tr>
+                <td>Last Name:</td>
+                <td><input type="text" placeholder="Enter last name"></td>
+            </tr>
+            <tr>
+                <td>Email:</td>
+                <td><input type="email" placeholder="Enter email"></td>
+            </tr>
+            <tr>
+                <td>Password:</td>
+                <td><input type="password" placeholder="Enter password"></td>
+            </tr>
+            <tr>
+                <td>Gender:</td>
+                <td>
+                    <input type="radio" name="gender"> Male
+                    <input type="radio" name="gender"> Female
+                </td>
+            </tr>
+            <tr>
+                <td>Date of Birth:</td>
+                <td><input type="date"></td>
+            </tr>
+            <tr>
+                <td>Hobbies:</td>
+                <td>
+                    <input type="checkbox"> Music
+                    <input type="checkbox"> Sports
+                    <input type="checkbox"> Reading
+                </td>
+            </tr>
+            <tr>
+                <td>Address:</td>
+                <td><textarea rows="2" cols="15"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2" style="text-align:center;">
+                    <button type="submit">SUBMIT</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
