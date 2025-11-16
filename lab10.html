@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<head>
+<title>AJAX Demo</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+body{font-family:Arial;margin:20px}
+.box{border:1px solid white;padding:10px;margin-top:8px}
+</style>
+</head>
+<body>
+<h3> AJAX without jQuery</h3>
+<button onclick="loadTxt()">Load Text</button>
+<div id="nojq" class="box">Text will appear here</div>
+<h3> AJAX with jQuery</h3>
+<button id="jqBtn">Load Text (jQuery)</button>
+<div id="jq" class="box"></div>
+<h3> getJSON()</h3>
+<button id="getJ">Load JSON</button>
+<div id="jsonBox" class="box"></div>
+<h3> parseJSON()</h3>
+<button id="pJ">Parse JSON</button>
+<div id="parseBox" class="box"></div>
+<script>
+// a) AJAX without jQuery
+function loadTxt(){
+  let x=new XMLHttpRequest();
+  x.open("GET","sample.txt");
+  x.onload=()=>{ Nojq.innerHTML=x.responseText };
+  x.send();
+}
+// b) AJAX with jQuery
+$("#jqBtn").click(()=>$("#jq").load("sample.txt"));
+// c) getJSON()
+$("#getJ").click(()=>{
+  $.getJSON("data.json",d=>{
+    $("#jsonBox").html("Name:"+d.name+"<br>Age:"+d.age);
+  });
+});
+// d) parseJSON()
+$("#pJ").click(()=>{
+  let j='{"name":"Alice","age":25}';
+  let o=$.parseJSON(j);
+  $("#parseBox").html("Name:"+o.name+"<br>Age:"+o.age);
+});
+</script>
+</body>
+</html>
