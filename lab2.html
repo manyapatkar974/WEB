@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<head>
+    <title>Time table</title>
+    <style>
+        table{
+            width:100%;
+            border-collapse:collapse;
+            text-align:center;
+        }
+        th,td{
+            border:10px solid black;
+            padding :10px;
+                }
+                th{background-color: grey;}
+                tr:nth-child(even){background-color: rgb(34, 139, 104);}
+                tr:nth-child(odd){background-color: rgb(220, 102, 220);}
+.lab{background-color:coral;}
+.elective{background-color:rgb(167, 255, 255);}
+tfoot{background-color:orchid;}
+    </style>
+</head>
+<body>
+<table>
+<thead>
+<tr>
+<th rowspan="2">DAY</th>
+<th colspan="5">SUBJECT/TIME</th>
+</tr>
+<tr> 
+<th>9:00-10:00</th>
+<th>10:00-11:00</th>
+<th>11:00-12:00</th>
+<th>1:00-2:00</th>
+<th>2:00-3:00</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MONDAY</td>
+<td>Maths</td>
+<td>English</td>
+<td>Chem</td>
+<td class="lab" colspan="2">PHYSICS LAB</td>
+</tr>
+<tr>
+<td>TUESDAY</td>
+<td>Physics</td>
+<td class="elective">AI-ML</td>
+<td>Maths</td>
+<td>Bio/CS</td>
+<td>Library</td>
+</tr>
+<tr>
+<td>WEDNESDAY</td>
+<td class="elective" colspan="2">CG/AI</td>
+<td>Physics</td>
+<td>Maths</td>
+<td>NSS</td>
+</tr>
+<tr>
+<td>THURSDAY</td>
+<td>English</td>
+<td>Maths</td>
+<td class="lab" colspan="3">CS/BIO</td>
+</tr>
+<tr>
+<td>FRIDAY</td>
+<td>Chemistry</td>
+<td>Physics</td>
+<td>Maths</td>
+<td>English</td>
+<td>Bio/CS</td>
+</tr>
+<tr>
+<td>SATURDAY</td>
+<td colspan="5">Valueadded/Holiday</td>
+</tr>
+<tfoot>
+<tr>
+<td colspan="6">NOTE:Labs & Electives are highlighted with different colors</td>
+</tr>
+</tfoot>
+</tbody>
+</table>
+</body>
+</html>
