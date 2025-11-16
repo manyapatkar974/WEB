@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+<title>jQuery Example</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+.box{width:100px;height:100px;background:plum;margin:10px;}
+</style>
+</head>
+<body>
+<p id="p">This is a paragraph.</p>
+<ul id="list"><li>Item 1</li></ul>
+<button id="add">Append</button>
+<div class="box" id="box"></div>
+<button id="ani">Animate</button>
+<script>
+$(function(){
+let count = 1;   // Item 1 already exists
+$("#add").click(()=>{
+count++;   // next item number
+$("#p").append(" +Item " + count);
+$("#list").append("<li>Item " + count + "</li>");
+});
+$("#ani").click(()=>{
+$("#box").animate({width:"150px",height:"150px"},500)
+.css("background","aqua");
+});
+});
+</script>
+</body>
+</html>
