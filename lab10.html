@@ -15,12 +15,12 @@
   <h3>AJAX with jQuery</h3>
   <button id="jqBtn">Load Text (jQuery)</button>
   <div id="jq" class="box"></div>
-  <h3>getJSON()</h3>
+  <h3>getJSON</h3>
   <button id="getJ">Load JSON</button>
-  <div id="jsonBox" class="box"></div>
-  <h3>parseJSON()</h3>
+  <div id="json" class="box"></div>
+  <h3>parseJSON</h3>
   <button id="pJ">Parse JSON</button>
-  <div id="parseBox" class="box"></div>
+  <div id="parse" class="box"></div>
   <script>
     // a) AJAX without jQuery
     function loadTxt() {
@@ -36,14 +36,14 @@
     // c) getJSON()
     $("#getJ").click(() => {
       $.getJSON("data.json", d => {
-        $("#jsonBox").html("Name: " + d.name + "<br>Age: " + d.age);
+        $("#json").html("Name: " + d.name + "<br>Age: " + d.age);
       });
     });
     // d) parseJSON()
     $("#pJ").click(() => {
       let j = '{"name":"Alice","age":25}';
       let o = $.parseJSON(j);
-      $("#parseBox").html("Name: " + o.name + "<br>Age: " + o.age);
+      $("#parse").html("Name: " + o.name + "<br>Age: " + o.age);
     });
   </script>
 </body>
