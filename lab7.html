@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>JSON and Data</title>
+  <link rel="stylesheet" href="7.css">
+</head>
+<body>
+  <h1>JSON and Data</h1>
+  <section>
+    <h2>JSON to Object</h2>
+    <textarea id="jsonInput" placeholder='{"name":"Manya","age":20}'></textarea>
+    <button onclick="convertJsonToObject()">Convert</button>
+    <pre id="objectOutput"></pre>
+  </section>
+  <section>
+    <h2>JSON Date to Date Object</h2>
+    <input id="dateInput" type="text" placeholder='{"date":"2023-10-01"}'>
+    <button onclick="convertJsonToDate()">Convert</button>
+    <p id="dateOutput"></p>
+  </section>
+  <section>
+    <h2>JSON ⇄ CSV</h2>
+    <textarea id="jsonCsvInput" placeholder='[{"name":"A","age":20},{"name":"B","age":22}]'></textarea>
+    <button onclick="convertJsonToCsv()">JSON to CSV</button>
+    <pre id="csvOutput"></pre>
+    <textarea id="csvToJsonInput" placeholder="name,age&#10;A,20&#10;B,22"></textarea>
+    <button onclick="convertCsvToJson()">CSV to JSON</button>
+    <pre id="jsonOutput"></pre>
+  </section>
+  <section>
+    <h2>Hash a String (SHA-256)</h2>
+    <input id="hashInput" type="text" placeholder="Enter text">
+    <button onclick="createHash()">Generate Hash</button>
+    <p id="hashOutput"></p>
+  </section>
+  <script src="7.js"></script>
+</body>
+</html>
