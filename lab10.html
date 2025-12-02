@@ -22,7 +22,7 @@
   <button id="pJ">Parse JSON</button>
   <div id="parse" class="box"></div>
   <script>
-    // a) AJAX without jQuery
+    
     function loadTxt() {
       let x = new XMLHttpRequest();
       x.open("GET", "sample.txt");
@@ -31,15 +31,15 @@
       };
       x.send();
     }
-    // b) AJAX with jQuery
+    
     $("#jqBtn").click(() => $("#jq").load("sample.txt"));
-    // c) getJSON()
+    
     $("#getJ").click(() => {
       $.getJSON("data.json", d => {
         $("#json").html("Name: " + d.name + "<br>Age: " + d.age);
       });
     });
-    // d) parseJSON()
+    
     $("#pJ").click(() => {
       let j = '{"name":"Alice","age":25}';
       let o = $.parseJSON(j);
